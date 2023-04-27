@@ -61,16 +61,6 @@ def DoorayGPTResponse(query):
         ]
     }
 
-    # messages = [
-    #     {"role": "system", "content": "You are a helpful assistant."},
-    #     {"role": "user", "content": query["text"], "name":query["userId"]}
-    # ]
-    # # ChatGPT API 호출하기
-    # response = openai.ChatCompletion.create(
-    #     model=model,
-    #     messages=messages
-    # )
-    # print(response)
     INCOMING_URL = json.loads(redis_db2.get(session_id))
     response = requests.post(url=INCOMING_URL["hook-url"], headers=INCOMING_HEADER, data=json.dumps(resp_data))
 
