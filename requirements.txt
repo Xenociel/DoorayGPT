@@ -1,0 +1,9 @@
+openai
+PyKakao
+Pillow==9.3.0
+fastapi==0.88.0
+Python-dotenv==0.21.0
+torchvision==0.14.1
+uvicorn==0.20.0
+timm==0.6.12
+python-multipart==0.0.5
